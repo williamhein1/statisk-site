@@ -1,0 +1,16 @@
+.grid-front-page {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (width > 700px) {
+  .grid-front-page {
+    display: grid;
+    grid-template-columns: 3fr 4fr;
+    gap: 1rem;
+  }
+
+  .grid-front-page div:first-child {
+    text-align: right;
+  }
+}
