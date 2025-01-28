@@ -1,0 +1,4 @@
+.grid-front-page {
+  display: grid;
+  grid-template-columns: 1fr;
+}
