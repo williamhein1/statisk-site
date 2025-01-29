@@ -1,6 +1,38 @@
 .grid-front-page {
   display: grid;
   grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.product_list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.product_list_container {
+  display: grid;
+  /* grid-template-rows: subgrid; */
+  grid-row: span 3;
+  gap: 0;
+  align-items: start;
+  margin-bottom: 3rem;
+}
+
+.product_info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.sale_title {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_menu {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--li_font);
 }
 
 @media (width > 700px) {

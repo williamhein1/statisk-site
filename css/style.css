@@ -21,9 +21,10 @@
 html {
   --background_color: red;
   --main_color: white;
-  --h1_font: "WorkSans-ExtraBold";
+  --h1_font: "WorkSans-Bold";
   --li_font: "WorkSans-ExtraLight";
   --h2_font: "WorkSans-Bold";
+  --h3_font: "WorkSans-Bold";
   scroll-behavior: smooth;
 }
 
@@ -42,6 +43,17 @@ header {
   margin: 1rem;
 }
 
+header {
+  margin-bottom: 5rem;
+  margin-top: 0;
+}
+
+.header_menu,
+h1 {
+  position: relative;
+  z-index: 2000;
+}
+
 h1 {
   font-family: var(--h1_font);
   font-size: 12.8vw;
@@ -53,6 +65,22 @@ h1 {
 h2 {
   font-family: var(--h2_font);
   font-size: 10pt;
+}
+
+h3 {
+  font-family: var(--h3_font);
+  margin-top: 0.5rem;
+  margin-bottom: 0.2rem;
+  font-size: 13pt;
+}
+
+.read_more {
+  text-decoration: underline;
+}
+
+.product_list {
+  font-family: var(--li_font);
+  font-size: 13pt;
 }
 
 ul {
@@ -72,8 +100,105 @@ a:hover {
   text-decoration: underline;
 }
 
+img {
+  max-width: 100%;
+}
+
+.sold_out img {
+  opacity: 70%;
+}
+
+.sale_title div {
+  margin-top: 0.5rem;
+  background-color: white;
+  color: red;
+  padding: 0.1rem;
+}
+
+.menu-checkbox {
+  display: none;
+}
+
+/* The word that toggles the menu */
+.menu-trigger {
+  z-index: 100;
+  cursor: pointer;
+}
+
+.menu-trigger:hover {
+  text-decoration: underline;
+}
+
+/* Fullscreen menu (hidden by default) */
+.fullscreen-menu {
+  position: absolute;
+  top: 1rem;
+  left: 0;
+  width: 100vw;
+  height: calc(100vh); /* Take up remaining space */
+  background: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding-right: 1rem;
+  transform: scaleY(0); /* Start collapsed */
+  transform-origin: top;
+  transition: transform 0.4s ease-in-out;
+  border-left: 1rem solid white;
+  border-right: 1rem solid white;
+  box-sizing: border-box;
+  z-index: 20;
+}
+
+/* Show menu when checkbox is checked */
+.menu-checkbox:checked ~ .fullscreen-menu {
+  transform: scaleY(1);
+}
+
+/* Disable scrolling when menu is open */
+body:has(.menu-checkbox:checked) {
+  overflow: hidden;
+}
+
+/* body:has(.menu-checkbox:checked) main .sold_out img {
+  opacity: 0;
+  pointer-events: none;
+} */
+
+.fullscreen-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.fullscreen-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 25pt;
+  transition: color 0s;
+}
+
+.fullscreen-menu ul li a:hover {
+  text-decoration: underline;
+}
+
 @media (width > 700px) {
   h1 {
     font-size: 14vw;
+    width: 100%;
+  }
+
+  .fullscreen-menu {
+    justify-content: flex-start;
+  }
+
+  .header_menu {
+    font-size: 20pt;
+  }
+
+  .fullscreen-menu ul {
+    margin-top: 30%;
   }
 }
