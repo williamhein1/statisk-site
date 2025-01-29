@@ -3,7 +3,55 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Product</title>
+    <title>Productlist</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/layout.css" />
   </head>
-  <body></body>
+  <body>
+    <header>
+      <h1><a href="index.html" class="logo">FASHIONRUS</a></h1>
+      <div class="header_menu">
+        <div><a href="productlist.html">BACK</a></div>
+        <label for="menu-toggle" class="menu-trigger">CATEGORIES</label>
+      </div>
+
+      <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
+
+      <div class="fullscreen-menu">
+        <ul>
+          <li><a href="productlist.html">ACCESSORIES</a></li>
+          <li><a href="productlist.html">APPAREL</a></li>
+          <li><a href="productlist.html">FOOTWEAR</a></li>
+          <li><a href="productlist.html">FREE ITEMS</a></li>
+          <li><a href="productlist.html">PERSONAL CARE</a></li>
+          <li><a href="productlist.html">SPORTING GOODS</a></li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <section class="product_container">
+        <div>
+          <img src="assets/1590.webp" alt="Fodboldsko" />
+        </div>
+
+        <div class="product_details_container">
+          <h3 class="h3_product">TITLE</h3>
+
+          <div>PRICE</div>
+
+          <div>COLOR</div>
+
+          <div class="size-container">
+            <div>SIZE:</div>
+            <div class="size-menu">NA</div>
+          </div>
+
+          <div class="buy_button">ADD TO BASKET</div>
+
+          <div>ESTIMATED DELIVERY TIME: 1-2 BUSINESS DAYS</div>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
