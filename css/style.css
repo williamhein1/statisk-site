@@ -21,7 +21,7 @@
 html {
   --background_color: red;
   --main_color: white;
-  --h1_font: "WorkSans-ExtraBold";
+  --h1_font: "WorkSans-Bold";
   --li_font: "WorkSans-ExtraLight";
   --h2_font: "WorkSans-Bold";
   --h3_font: "WorkSans-Bold";
@@ -187,6 +187,7 @@ body:has(.menu-checkbox:checked) {
 @media (width > 700px) {
   h1 {
     font-size: 14vw;
+    width: 100%;
   }
 
   .fullscreen-menu {
