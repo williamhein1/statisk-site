@@ -31,7 +31,7 @@ html {
 body {
   background-color: var(--background_color);
   color: white;
-  border: 1rem solid white; /* Add a 30px white border */
+  border: 0.5rem solid white; /* Add a 30px white border */
   margin: 0; /* Remove default margin */
   box-sizing: border-box; /* Ensure padding and border are included in the element's dimensions */
   min-height: 100vh; /* Ensure the body covers the entire viewport */
@@ -44,7 +44,7 @@ header {
 }
 
 header {
-  margin-bottom: 5rem;
+  margin-bottom: 3rem;
   margin-top: 0;
 }
 
@@ -74,6 +74,10 @@ h3 {
   font-size: 13pt;
 }
 
+.h3_product {
+  margin: 0;
+}
+
 .read_more {
   text-decoration: underline;
 }
@@ -101,7 +105,8 @@ a:hover {
 }
 
 img {
-  max-width: 100%;
+  width: 100%;
+  max-height: 100%;
 }
 
 .sold_out img {
@@ -184,6 +189,28 @@ body:has(.menu-checkbox:checked) {
   text-decoration: underline;
 }
 
+.product_container {
+  font-family: var(--li_font);
+}
+
+.buy_button,
+.size-menu {
+  background-color: white;
+  color: red;
+  padding: 0.2rem;
+  width: fit-content;
+  height: fit-content;
+  cursor: pointer;
+}
+
+.h2_front_page {
+  margin: 0;
+}
+
+.logo:hover {
+  text-decoration: none;
+}
+
 @media (width > 700px) {
   h1 {
     font-size: 14vw;
@@ -200,5 +227,9 @@ body:has(.menu-checkbox:checked) {
 
   .fullscreen-menu ul {
     margin-top: 30%;
+  }
+
+  .h2_front_page {
+    margin: 0.5rem;
   }
 }
