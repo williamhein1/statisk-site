@@ -45,6 +45,13 @@ header {
 
 header {
   margin-bottom: 5rem;
+  margin-top: 0;
+}
+
+.header_menu,
+h1 {
+  position: relative;
+  z-index: 2000;
 }
 
 h1 {
@@ -108,7 +115,6 @@ img {
   padding: 0.1rem;
 }
 
-/* dropdown menu */
 .menu-checkbox {
   display: none;
 }
@@ -119,31 +125,47 @@ img {
   cursor: pointer;
 }
 
+.menu-trigger:hover {
+  text-decoration: underline;
+}
+
 /* Fullscreen menu (hidden by default) */
 .fullscreen-menu {
-  position: fixed;
-  top: 150px;
+  position: absolute;
+  top: 1rem;
   left: 0;
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh); /* Take up remaining space */
   background: red;
   color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+  padding-right: 1rem;
   transform: scaleY(0); /* Start collapsed */
   transform-origin: top;
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.4s ease-in-out;
   border-left: 1rem solid white;
   border-right: 1rem solid white;
-  border-bottom: 1rem solid white;
   box-sizing: border-box;
+  z-index: 20;
 }
 
 /* Show menu when checkbox is checked */
 .menu-checkbox:checked ~ .fullscreen-menu {
   transform: scaleY(1);
 }
+
+/* Disable scrolling when menu is open */
+body:has(.menu-checkbox:checked) {
+  overflow: hidden;
+}
+
+/* body:has(.menu-checkbox:checked) main .sold_out img {
+  opacity: 0;
+  pointer-events: none;
+} */
 
 .fullscreen-menu ul {
   list-style: none;
@@ -154,8 +176,8 @@ img {
 .fullscreen-menu ul li a {
   text-decoration: none;
   color: white;
-  font-size: 32px;
-  transition: color 0.3s;
+  font-size: 25pt;
+  transition: color 0s;
 }
 
 .fullscreen-menu ul li a:hover {
@@ -165,5 +187,17 @@ img {
 @media (width > 700px) {
   h1 {
     font-size: 14vw;
+  }
+
+  .fullscreen-menu {
+    justify-content: flex-start;
+  }
+
+  .header_menu {
+    font-size: 20pt;
+  }
+
+  .fullscreen-menu ul {
+    margin-top: 30%;
   }
 }
