@@ -43,13 +43,16 @@ header {
   margin: 1rem;
 }
 
+header {
+  margin-bottom: 5rem;
+}
+
 h1 {
   font-family: var(--h1_font);
   font-size: 12.8vw;
   margin: 0 auto;
   word-wrap: break-word; /* Break long words if necessary */
   overflow-wrap: break-word;
-  margin-bottom: 5rem;
 }
 
 h2 {
@@ -103,6 +106,60 @@ img {
   background-color: white;
   color: red;
   padding: 0.1rem;
+}
+
+/* dropdown menu */
+.menu-checkbox {
+  display: none;
+}
+
+/* The word that toggles the menu */
+.menu-trigger {
+  z-index: 100;
+  cursor: pointer;
+}
+
+/* Fullscreen menu (hidden by default) */
+.fullscreen-menu {
+  position: fixed;
+  top: 150px;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: red;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: scaleY(0); /* Start collapsed */
+  transform-origin: top;
+  transition: transform 0.3s ease-in-out;
+  border-left: 1rem solid white;
+  border-right: 1rem solid white;
+  border-bottom: 1rem solid white;
+  box-sizing: border-box;
+}
+
+/* Show menu when checkbox is checked */
+.menu-checkbox:checked ~ .fullscreen-menu {
+  transform: scaleY(1);
+}
+
+.fullscreen-menu ul {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+}
+
+.fullscreen-menu ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 32px;
+  transition: color 0.3s;
+}
+
+.fullscreen-menu ul li a:hover {
+  text-decoration: underline;
 }
 
 @media (width > 700px) {

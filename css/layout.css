@@ -29,6 +29,12 @@
   justify-content: space-between;
 }
 
+.header_menu {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--li_font);
+}
+
 @media (width > 700px) {
   .grid-front-page {
     display: grid;
