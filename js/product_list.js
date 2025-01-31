@@ -15,7 +15,7 @@ function showList(products){
           <h3>${product.productdisplayname}</h3>
         </a>
         <div class="product_info">
-          <div>PRICE</div>
+          <div>${product.price} DKK</div>
           <div class="read_more"><a href="">READ MORE</a></div>
         </div>
       </article>`;
