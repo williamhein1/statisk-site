@@ -62,16 +62,24 @@ h1 {
   overflow-wrap: break-word;
 }
 
+p {
+  margin: 0;
+}
+
 h2 {
   font-family: var(--h2_font);
   font-size: 10pt;
 }
 
+#produktliste_titel {
+  font-size: 20pt;
+}
+
 h3 {
   font-family: var(--h3_font);
   margin-top: 0.5rem;
-  margin-bottom: 0.2rem;
-  font-size: 13pt;
+  margin-bottom: 0.5rem;
+  font-size: 14pt;
 }
 
 .h3_product {
@@ -84,7 +92,7 @@ h3 {
 
 .product_list {
   font-family: var(--li_font);
-  font-size: 13pt;
+  font-size: 12pt;
 }
 
 ul {
@@ -110,11 +118,10 @@ img {
 }
 
 .sold_out img {
-  opacity: 70%;
+  opacity: 50%;
 }
 
-.sale_title div {
-  margin-top: 0.5rem;
+.sale_discount {
   background-color: white;
   color: red;
   padding: 0.1rem;
@@ -211,6 +218,11 @@ body:has(.menu-checkbox:checked) {
   text-decoration: none;
 }
 
+.product_info {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 @media (width > 700px) {
   h1 {
     font-size: 14vw;
@@ -231,5 +243,9 @@ body:has(.menu-checkbox:checked) {
 
   .h2_front_page {
     margin: 0.5rem;
+  }
+
+  .h3_product {
+    font-size: 20pt;
   }
 }
