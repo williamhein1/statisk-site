@@ -31,8 +31,10 @@ html {
 body {
   background-color: var(--background_color);
   color: white;
-  border: 0.5rem solid white; /* Add a 30px white border */
+  /* border: 5rem solid white; Add a 30px white border */
   margin: 0; /* Remove default margin */
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
   box-sizing: border-box; /* Ensure padding and border are included in the element's dimensions */
   min-height: 100vh; /* Ensure the body covers the entire viewport */
 }
@@ -52,6 +54,7 @@ header {
 h1 {
   position: relative;
   z-index: 2000;
+  font-size: 15pt;
 }
 
 h1 {
@@ -73,6 +76,7 @@ h2 {
 
 #produktliste_titel {
   font-size: 20pt;
+  text-transform: uppercase;
 }
 
 h3 {
@@ -158,8 +162,8 @@ img {
   transform: scaleY(0); /* Start collapsed */
   transform-origin: top;
   transition: transform 0.4s ease-in-out;
-  border-left: 1rem solid white;
-  border-right: 1rem solid white;
+  border-left: 0.5rem solid white;
+  border-right: 0.5rem solid white;
   box-sizing: border-box;
   z-index: 20;
 }
@@ -173,11 +177,6 @@ img {
 body:has(.menu-checkbox:checked) {
   overflow: hidden;
 }
-
-/* body:has(.menu-checkbox:checked) main .sold_out img {
-  opacity: 0;
-  pointer-events: none;
-} */
 
 .fullscreen-menu ul {
   list-style: none;
@@ -223,6 +222,58 @@ body:has(.menu-checkbox:checked) {
   margin-bottom: 0.5rem;
 }
 
+footer {
+  font-family: var(--li_font);
+  margin-top: 10rem;
+}
+
+.filters {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-family: var(--li_font);
+  gap: 1.5rem;
+}
+
+h4 {
+  font-family: var(--li_font);
+  font-size: 12pt;
+}
+
+.filters label {
+  font-family: var(--li_font);
+  color: white;
+}
+
+.filters input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: red;
+  width: 18px;
+  height: 18px;
+  margin: 0;
+  margin-top: 0.2rem;
+  background-color: white;
+  border-radius: 0px;
+}
+
+.filters input[type="number"] {
+  font-family: var(--li_font);
+  color: red;
+  border: none;
+  margin: 0;
+  margin-top: 0.2rem;
+  padding: 0.2rem;
+  width: 90px;
+}
+
+.footer_logo {
+  font-family: var(--h1_font);
+  font-size: 12.8vw;
+  margin: 0 auto;
+  word-wrap: break-word; /* Break long words if necessary */
+  overflow-wrap: break-word;
+}
+
 @media (width > 700px) {
   h1 {
     font-size: 14vw;
@@ -247,5 +298,32 @@ body:has(.menu-checkbox:checked) {
 
   .h3_product {
     font-size: 20pt;
+  }
+
+  header {
+    margin-bottom: 3rem;
+  }
+
+  .footer_logo {
+    font-size: 14vw;
+    width: 100%;
+  }
+
+  .product_container {
+    margin-top: 8rem;
+  }
+
+  .product_img {
+    justify-self: end;
+  }
+
+  .product_container img {
+    width: auto;
+    object-fit: contain;
+    max-height: 500px;
+  }
+
+  footer {
+    margin-top: 8rem;
   }
 }
