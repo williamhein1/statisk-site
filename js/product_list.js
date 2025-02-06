@@ -3,7 +3,7 @@ const listContainer = document.querySelector(".product_list")
 
 let allProducts = [];
 
-fetch(`https://kea-alt-del.dk/t7/api/products?category=${myCategory}`)
+fetch(`https://kea-alt-del.dk/t7/api/products?category=${myCategory}&limit=20`)
 .then((response) => response.json())
 .then((data) => {
   allProducts = data;
