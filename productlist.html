@@ -11,28 +11,33 @@
     <header>
       <h1><a href="index.html" class="logo">FASHIONRUS</a></h1>
       <div class="header_menu">
-        <div><a href="index.html">BACK</a></div>
-        <label for="menu-toggle" class="menu-trigger">CATEGORIES</label>
+        <label for="menu-toggle" class="menu-trigger">CATEGORIES+</label>
       </div>
 
       <input type="checkbox" id="menu-toggle" class="menu-checkbox" />
 
       <div class="fullscreen-menu">
         <ul>
-          <li><a href="productlist.html">ACCESSORIES</a></li>
+          <!-- <li><a href="productlist.html">ACCESSORIES</a></li>
           <li><a href="productlist.html">APPAREL</a></li>
           <li><a href="productlist.html">FOOTWEAR</a></li>
           <li><a href="productlist.html">FREE ITEMS</a></li>
           <li><a href="productlist.html">PERSONAL CARE</a></li>
-          <li><a href="productlist.html">SPORTING GOODS</a></li>
+          <li><a href="productlist.html">SPORTING GOODS</a></li> -->
         </ul>
       </div>
     </header>
 
     <main>
       <h2 id="produktliste_titel">h</h2>
+      <h3>FILTERS</h3>
+      <div class="filters">
+        <label>ITEMS ON SALE: <input type="checkbox" id="saleFilter" /> </label>
+        <label>MAX PRICE: <input type="number" id="priceFilter" placeholder="(DKK)" /></label>
+      </div>
+
       <section class="product_list">
-        <article class="product_list_container">
+        <!-- <article class="product_list_container">
           <a href="product.html">
             <img src="assets/1590.webp" alt="Fodboldsko" />
             <h3>TITLE</h3>
@@ -121,9 +126,15 @@
             <div>PRICE</div>
             <div class="read_more"><a href="">READ MORE</a></div>
           </div>
-        </article>
+        </article> -->
       </section>
     </main>
+
+    <footer>
+      <p>&#169; WILLIAM HEIN 2025</p>
+      <div class="footer_logo">FASHIONRUS</div>
+    </footer>
+
     <script src="./js/product_list.js"></script>
   </body>
 </html>

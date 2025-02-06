@@ -20,11 +20,6 @@
   max-width: 100%;
 }
 
-.product_info {
-  display: flex;
-  justify-content: space-between;
-}
-
 .sale_title {
   display: flex;
   justify-content: space-between;
